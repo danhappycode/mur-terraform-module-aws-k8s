@@ -19,16 +19,6 @@ resource "aws_iam_role" "ms-cluster" {
         "Service": "eks.amazonaws.com"
       },
       "Action": "sts:AssumeRole"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ecr:BatchCheckLayerAvailability",
-        "ecr:BatchGetImage",
-        "ecr:GetDownloadUrlForLayer",
-        "ecr:GetAuthorizationToken"
-      ],
-      "Resource": "*"
     }
   ]
 }
